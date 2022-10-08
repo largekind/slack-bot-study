@@ -15,7 +15,7 @@ const app = new bolt.App({
 });
 //Botでメッセージを受信したときの処理を記述
 app.message(/hello/i, ({message, say}) => { //jsの正規表現で"Hello"(小文字大文字含む)を受けた場合に処理する内容を記載
-  say('こんにちは！');
+  say(`こんにちは！ <@${message.user}>さん`);
 });
 
 //Botの開始
